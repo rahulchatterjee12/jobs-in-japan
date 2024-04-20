@@ -1,0 +1,33 @@
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #f5f5f5;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.socialLink img {
+  width: 20px;
+  height: 20px;
+}
+
+.socialLink:hover {
+  color: #000;
+}

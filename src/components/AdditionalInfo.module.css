@@ -1,0 +1,41 @@
+.additionalInfo {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.infoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.infoItem {
+  text-align: left;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  width: 30rem; /* Adjust width as needed */
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.infoItem:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.infoIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.infoItem h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoItem p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

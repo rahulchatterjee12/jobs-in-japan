@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  /* Inherit or override global container styles here */
+  max-width: 7xl; /* Adjust max-width as needed */
+  padding-top: 8rem; /* Adjust padding as needed */
+  padding-bottom: 4rem; /* Adjust padding as needed */
+  margin: 0 auto;
+}
