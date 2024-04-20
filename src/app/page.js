@@ -18,7 +18,6 @@ export default function HomePage() {
           content="Find your dream job in Japan. Browse job openings, learn about the benefits of working in Japan, and get valuable resources for job seekers."
         />
       </Head> */}
-      {/* <Header /> */}
       <HeroSection />
       <JobSearch />
       <FeaturedJobs />

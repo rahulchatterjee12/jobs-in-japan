@@ -1,8 +1,3 @@
-.jobSearch {
-  text-align: center;
-  padding: 2rem 0;
-}
-
 .title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -15,7 +10,7 @@
 }
 
 .searchInput {
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.5rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   margin-right: 1rem;
@@ -25,7 +20,7 @@
 .searchButton {
   background-color: #3b82f6; /* Blue button */
   color: #fff;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1rem;
   border: none;
   border-radius: 0.5rem;
   font-size: 1rem;

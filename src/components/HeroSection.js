@@ -2,7 +2,7 @@ import styles from "./HeroSection.module.css";
 
 function HeroSection() {
   return (
-    <div className={`flex justify-between`}>
+    <div className={`flex justify-between flex-col md:flex-row gap-3`}>
       <div className={styles.heroContent}>
         <h1 className={styles.title}>Launch Your Career in Japan</h1>
         <p className={styles.description}>
@@ -12,8 +12,8 @@ function HeroSection() {
         <button className={styles.button}>Browse Jobs Now</button>
       </div>
       <img
-        className="w-2/5 h-80 rounded-md shadow-md"
-        src="images/hero-image.jpg"
+        className="md:w-2/5 md:h-80 rounded-md shadow-md m-4"
+        src="/images/hero-image.jpg"
         alt="Japan work opportunities"
       />
     </div>

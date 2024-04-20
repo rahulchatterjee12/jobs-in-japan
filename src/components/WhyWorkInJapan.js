@@ -10,7 +10,7 @@ function WhyWorkInJapan() {
         <div className={styles.reasonItem}>
           <img
             className={styles.reasonIcon}
-            src="/growth-icon.svg"
+            src="/images/growth-icon.svg"
             alt="Career growth icon"
           />
           <h3>Career Growth Opportunities</h3>
@@ -22,7 +22,7 @@ function WhyWorkInJapan() {
         <div className={styles.reasonItem}>
           <img
             className={styles.reasonIcon}
-            src="/high-standard-icon.svg"
+            src="/images/high-standard-icon.svg"
             alt="High standard of living icon"
           />
           <h3>High Standard of Living</h3>
@@ -34,7 +34,7 @@ function WhyWorkInJapan() {
         <div className={styles.reasonItem}>
           <img
             className={styles.reasonIcon}
-            src="/unique-culture-icon.svg"
+            src="/images/unique-culture-icon.svg"
             alt="Unique culture icon"
           />
           <h3>Unique Culture and Rich History</h3>

@@ -9,7 +9,7 @@ function Testimonials() {
       company: "Sony Interactive Entertainment",
       quote:
         "Working in Japan has been an incredible experience. I've grown so much professionally and personally.",
-      image: "/alice-walker.jpg",
+      image: "/images/profile.svg",
     },
     {
       id: 2,
@@ -18,9 +18,8 @@ function Testimonials() {
       company: "Dentsu Inc.",
       quote:
         "The work culture in Japan is very collaborative and supportive. I feel valued and challenged in my role.",
-      image: "/david-kim.jpg",
+      image: "/images/profile.svg",
     },
-    // Add more testimonials here
   ];
 
   return (

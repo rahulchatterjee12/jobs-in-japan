@@ -10,7 +10,7 @@ function AdditionalInfo() {
         <div className={styles.infoItem}>
           <img
             className={styles.infoIcon}
-            src="/visa-icon.svg"
+            src="/images/visa-icon.svg"
             alt="Visa information icon"
           />
           <h3>Visa Information</h3>
@@ -22,7 +22,7 @@ function AdditionalInfo() {
         <div className={styles.infoItem}>
           <img
             className={styles.infoIcon}
-            src="/job-search-icon.svg"
+            src="/images/job-search-icon.svg"
             alt="Job search tips icon"
           />
           <h3>Job Search Tips</h3>
@@ -34,7 +34,7 @@ function AdditionalInfo() {
         <div className={styles.infoItem}>
           <img
             className={styles.infoIcon}
-            src="/culture-icon.svg"
+            src="/images/culture-icon.svg"
             alt="Living in Japan icon"
           />
           <h3>Living in Japan</h3>

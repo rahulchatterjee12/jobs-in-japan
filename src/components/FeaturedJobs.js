@@ -14,7 +14,48 @@ function FeaturedJobs() {
       company: "DesignWorks",
       location: "Osaka, Japan",
     },
-    // Add more job listings here
+    {
+      id: 3,
+      title: "Marketing Manager",
+      company: "Tokyo Marketing Solutions",
+      location: "Tokyo, Japan",
+    },
+    {
+      id: 4,
+      title: "English Language Teacher",
+      company: "Global Education Institute",
+      location: "Kyoto, Japan",
+    },
+    {
+      id: 5,
+      title: "Sales Representative",
+      company: "Nippon Sales Corp.",
+      location: "Yokohama, Japan",
+    },
+    {
+      id: 6,
+      title: "Financial Analyst",
+      company: "Tokyo Financial Services",
+      location: "Tokyo, Japan",
+    },
+    {
+      id: 7,
+      title: "Customer Support Specialist",
+      company: "JapanTech Solutions",
+      location: "Nagoya, Japan",
+    },
+    {
+      id: 8,
+      title: "UI/UX Designer",
+      company: "Digital Innovations Co., Ltd.",
+      location: "Fukuoka, Japan",
+    },
+    {
+      id: 9,
+      title: "Data Scientist",
+      company: "AI Solutions Japan",
+      location: "Sapporo, Japan",
+    },
   ];
 
   return (

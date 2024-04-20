@@ -13,7 +13,7 @@ function Footer() {
           rel="noopener noreferrer"
           className={styles.socialLink}
         >
-          <img src="/facebook-icon.svg" alt="Facebook icon" />
+          <img src="/images/facebook-icon.svg" alt="Facebook icon" />
         </a>
         <a
           href="https://www.twitter.com/"
@@ -21,7 +21,7 @@ function Footer() {
           rel="noopener noreferrer"
           className={styles.socialLink}
         >
-          <img src="/twitter-icon.svg" alt="Twitter icon" />
+          <img src="/images/twitter-icon.svg" alt="Twitter icon" />
         </a>
         {/* Add links to other social media platforms here */}
       </nav>
