@@ -63,7 +63,11 @@ function FeaturedJobs() {
       <h2 className="font-semibold font-serif text-3xl mb-5">Featured Jobs</h2>
       <div className={styles.jobList}>
         {jobs.map((job) => (
-          <div key={job.id} className={styles.jobCard}>
+          <div
+            key={job.id}
+            className="bg-white bg-opacity-30 border border-gray-200 rounded-lg p-3 hover:cursor-pointer hover:shadow-md"
+            style={{ backdropFilter: "blur(20px)" }}
+          >
             <h3 className={styles.jobTitle}>{job.title}</h3>
             <p className={styles.companyInfo}>
               {job.company} - {job.location}

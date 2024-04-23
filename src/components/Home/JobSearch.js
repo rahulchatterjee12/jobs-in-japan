@@ -7,8 +7,9 @@ function JobSearch() {
       <form className={styles.searchForm}>
         <input
           type="text"
-          className={styles.searchInput}
+          className="bg-white bg-opacity-30 p-[15px] rounded-md mx-4 text-gray-800"
           placeholder="Job title or keyword"
+          style={{ backdropFilter: "blur(20px)" }}
         />
         <button type="submit" className={styles.searchButton}>
           Search

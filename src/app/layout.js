@@ -1,6 +1,6 @@
 import { Assistant } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Layout from "@/components/Layout";
 
 const assistant = Assistant({ subsets: ["latin"] });
 
@@ -15,8 +15,20 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={assistant.className}>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-        <Navbar />
-        {children}
+        <div
+          style={{
+            height: "100vh",
+            width: "100vw",
+            backgroundImage: 'url("/images/bg.jpg")',
+            backgroundSize: "cover",
+            contain: "content",
+            backgroundRepeat: "no-repeat",
+            overflowY: "scroll",
+            overflowX: "hidden",
+          }}
+        >
+          <Layout>{children}</Layout>
+        </div>
       </body>
     </html>
   );

@@ -19,6 +19,8 @@
   width: 35rem; /* Adjust width as needed */
   transition: box-shadow 0.3s ease;
   cursor: default;
+  background: #ffffff30;
+  backdrop-filter: "blur(20px)";
 }
 
 .testimonialItem:hover {
@@ -44,7 +46,7 @@
 
 .reviewerInfo {
   font-size: 0.9rem;
-  color: #aaa;
+  color: #3c3838;
 }
 
 .reviewerName {
