@@ -66,7 +66,7 @@ const page = () => {
         <ul>
           {jobs.map((job) => (
             <div key={job._id}>
-              <JobCard />
+              <JobCard job={job} />
             </div>
           ))}
         </ul>

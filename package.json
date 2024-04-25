@@ -15,7 +15,6 @@
     "@mui/material": "^5.15.15",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "axios": "^1.6.8",
-    "flowbite": "^2.3.0",
     "framer-motion": "^11.1.7",
     "mongoose": "^8.3.2",
     "next": "14.2.2",

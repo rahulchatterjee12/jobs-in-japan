@@ -1,23 +1,22 @@
 import React from "react";
 import styles from "./JobCard.module.css";
+import Link from "next/link";
 
-const JobCard = () => {
+const JobCard = ({ job }) => {
+  console.log(job);
   return (
-    <div>
-      <div class={styles.card}>
-        <p class={styles.card_title}>Product Name</p>
-        <p class={styles.small_desc}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-          veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
-          officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
-          eum nihil itaque!
-        </p>
-        <div class={styles.go_corner}>
-          <div class={styles.go_arrow}>→</div>
-        </div>
+    <Link href={`/jobs/${job._id}`} className={styles.card}>
+      <p className={styles.card_title}>{job.title}</p>
+      <p className={`${styles.company_title}`}>{job.company}</p>
+      <div className="flex gap-5">
+        <p className={styles.small_desc}>{job.experienceLevel}</p>
+        <p className={styles.small_desc}>{job.employmentType}</p>
       </div>
-    </div>
+      <p className={styles.small_desc}>{job.description}</p>
+      <div className={styles.go_corner}>
+        <div className={styles.go_arrow}>→</div>
+      </div>
+    </Link>
   );
 };
-
 export default JobCard;
