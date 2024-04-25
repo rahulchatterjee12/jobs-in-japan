@@ -19,7 +19,7 @@ const TransitionProvider = ({ children }) => {
           transition={{ duration: 0.5, ease: "easeOut" }}
         />
         <motion.div
-          className="fixed m-auto w-fit h-fit top-0 bottom-0 left-0 right-0 text-white font-serif text-8xl cursor-default z-40"
+          className="fixed m-auto w-fit h-fit top-0 bottom-0 left-0 right-0 text-white font-serif text-4xl md:text-8xl cursor-default z-40"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}

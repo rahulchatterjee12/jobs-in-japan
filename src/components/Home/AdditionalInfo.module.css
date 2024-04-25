@@ -15,10 +15,10 @@
   padding: 1.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
-  width: 30rem; /* Adjust width as needed */
+  width: 30rem;
   transition: box-shadow 0.3s ease;
   cursor: default;
-  background: #ffffff30;
+  background: #ffffff35;
   backdrop-filter: "blur(20px)";
 }
 

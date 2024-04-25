@@ -19,7 +19,7 @@ const ContactPage = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex my-auto gap-5 text-white text-6xl">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex my-auto gap-5 text-white text-3xl mx-auto md:text-6xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -41,7 +41,7 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 m-2 bg-white bg-opacity-30 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 text-gray-600"
+          className="h-1/2 lg:h-full lg:w-1/2 m-2 bg-white bg-opacity-30 rounded-xl text-xl flex flex-col gap-8 justify-center p-6 mt-5 md:p-24 text-gray-600"
           style={{ backdropFilter: "blur(20px)" }}
         >
           <span className="text-white">Enter Your Message:</span>

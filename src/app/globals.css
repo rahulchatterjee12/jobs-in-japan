@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 .container {
-  /* Inherit or override global container styles here */
-  max-width: 7xl; /* Adjust max-width as needed */
-  padding-top: 8rem; /* Adjust padding as needed */
-  padding-bottom: 4rem; /* Adjust padding as needed */
+  max-width: 7xl;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 2rem;
+  }
 }

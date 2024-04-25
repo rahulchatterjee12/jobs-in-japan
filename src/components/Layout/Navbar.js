@@ -1,6 +1,9 @@
 "use client";
+import { Button, Drawer } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import MobileNavbar from "./MobileNavbar";
 
 const navItems = [
   {
@@ -27,6 +30,11 @@ const navItems = [
 
 const Navbar = () => {
   const pathName = usePathname();
+  const [open, setOpen] = useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
 
   return (
     <nav
@@ -40,6 +48,8 @@ const Navbar = () => {
             Job Hunt
           </span>
         </a>
+
+        <MobileNavbar />
 
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">

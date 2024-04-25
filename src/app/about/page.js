@@ -12,9 +12,11 @@ const page = () => {
     >
       <div className="flex flex-col md:flex-row">
         <div className="w-full mb-8 md:mb-0">
-          <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">About JOB HUNT</h2>
-            <p class=" text-xl leading-relaxed">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-8">
+              About JOB HUNT
+            </h2>
+            <div className=" text-xl leading-relaxed">
               JOB HUNT is a company passionate about empowering individuals to
               find their dream careers in Japan. Founded in [Year] by
               [Founder(s) Name(s)], we strive to bridge the gap between talented
@@ -22,26 +24,26 @@ const page = () => {
               market.
               <br />
               We believe in:
-              <ul class="list-disc pl-4 mt-4">
-                <li class="">
+              <ul className="list-disc pl-4 mt-4">
+                <li className="">
                   Empowering Job Seekers: We provide comprehensive resources and
                   personalized guidance to help you navigate the unique
                   landscape of job hunting in Japan.
                 </li>
-                <li class="">
+                <li className="">
                   Connecting with Top Employers: We partner with leading
                   Japanese companies across various industries to offer a
                   diverse range of job openings.{" "}
                 </li>
-                <li class="">
+                <li className="">
                   Promoting Cultural Understanding: We bridge cultural
                   differences and equip you with the knowledge and skills to
                   thrive in a Japanese work environment.{" "}
                 </li>
               </ul>
-            </p>
+            </div>
 
-            <p class=" text-xl leading-relaxed mt-8">
+            <p className=" text-xl leading-relaxed mt-8">
               Our journey began with a vision to make the job search process in
               Japan more accessible and efficient for international and local
               candidates alike. Today, we're a team of dedicated professionals
