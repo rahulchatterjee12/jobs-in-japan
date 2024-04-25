@@ -1,6 +1,5 @@
 .copyright {
   font-size: 0.9rem;
-  color: #000;
   margin-bottom: 0.5rem;
 }
 
@@ -13,15 +12,10 @@
 .socialLink {
   display: flex;
   align-items: center;
-  color: #333;
   transition: color 0.3s ease;
 }
 
 .socialLink img {
   width: 20px;
   height: 20px;
-}
-
-.socialLink:hover {
-  color: #000;
 }

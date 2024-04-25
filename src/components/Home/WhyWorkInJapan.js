@@ -2,7 +2,7 @@ import styles from "./WhyWorkInJapan.module.css";
 
 function WhyWorkInJapan() {
   return (
-    <section className={styles.whyWorkInJapan}>
+    <section className={`${styles.whyWorkInJapan} text-white`}>
       <h2 className="font-semibold font-serif text-3xl mb-5">
         Why Work in Japan?
       </h2>

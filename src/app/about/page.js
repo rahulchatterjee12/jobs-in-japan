@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const page = () => {
   return (
     <motion.div
-      className="h-full pb-4 items-center"
+      className="h-full pb-4 items-center text-white"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -14,7 +14,7 @@ const page = () => {
         <div className="w-full mb-8 md:mb-0">
           <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-8">About JOB HUNT</h2>
-            <p class="text-gray-900 text-xl leading-relaxed">
+            <p class=" text-xl leading-relaxed">
               JOB HUNT is a company passionate about empowering individuals to
               find their dream careers in Japan. Founded in [Year] by
               [Founder(s) Name(s)], we strive to bridge the gap between talented
@@ -23,17 +23,17 @@ const page = () => {
               <br />
               We believe in:
               <ul class="list-disc pl-4 mt-4">
-                <li class="text-gray-900">
+                <li class="">
                   Empowering Job Seekers: We provide comprehensive resources and
                   personalized guidance to help you navigate the unique
                   landscape of job hunting in Japan.
                 </li>
-                <li class="text-gray-900">
+                <li class="">
                   Connecting with Top Employers: We partner with leading
                   Japanese companies across various industries to offer a
                   diverse range of job openings.{" "}
                 </li>
-                <li class="text-gray-900">
+                <li class="">
                   Promoting Cultural Understanding: We bridge cultural
                   differences and equip you with the knowledge and skills to
                   thrive in a Japanese work environment.{" "}
@@ -41,7 +41,7 @@ const page = () => {
               </ul>
             </p>
 
-            <p class="text-gray-900 text-xl leading-relaxed mt-8">
+            <p class=" text-xl leading-relaxed mt-8">
               Our journey began with a vision to make the job search process in
               Japan more accessible and efficient for international and local
               candidates alike. Today, we're a team of dedicated professionals
@@ -60,11 +60,11 @@ const page = () => {
         <div className="team-member">
           <img
             className="w-48 h-48 rounded-full mx-auto mb-2 object-cover "
-            src="/images/profile.svg" // Replace with your image
+            src="/images/profile.svg"
             alt="Team Member 1"
           />
           <h4 className="text-xl font-bold text-center mb-1">John Doe</h4>
-          <p className="text-gray-900 text-center">Co-founder & CEO</p>
+          <p className=" text-center">Co-founder & CEO</p>
         </div>
 
         {/* Team Member Card 2 */}
@@ -75,7 +75,7 @@ const page = () => {
             alt="Team Member 2"
           />
           <h4 className="text-xl font-bold text-center mb-1">Jane Smith</h4>
-          <p className="text-gray-900 text-center">Frontend Engineer</p>
+          <p className=" text-center">Frontend Engineer</p>
         </div>
 
         <div className="team-member">
@@ -85,7 +85,7 @@ const page = () => {
             alt="Team Member 2"
           />
           <h4 className="text-xl font-bold text-center mb-1">Jon Fosse</h4>
-          <p className="text-gray-900 text-center">Backend Engineer</p>
+          <p className=" text-center">Backend Engineer</p>
         </div>
       </div>
     </motion.div>

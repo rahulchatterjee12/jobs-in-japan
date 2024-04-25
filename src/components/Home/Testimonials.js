@@ -23,7 +23,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className={styles.testimonials}>
+    <section className={`${styles.testimonials} text-white`}>
       <h2 className="font-semibold font-serif text-3xl mb-5">Testimonials</h2>
       <div className={styles.testimonialList}>
         {testimonials.map((testimonial) => (

@@ -2,7 +2,7 @@ import styles from "./JobSearch.module.css";
 
 function JobSearch() {
   return (
-    <div className="text-center  mt-10">
+    <div className="text-center  mt-10 text-white">
       <h2 className={styles.title}>Search for Jobs</h2>
       <form className={styles.searchForm}>
         <input

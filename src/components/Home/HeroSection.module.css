@@ -1,9 +1,9 @@
 .hero {
   display: flex;
-  background-color: #f0f2f5; /* Light blue background */
+  background-color: #f5f0f5;
   padding: 5rem 0;
   @screen sm {
-    flex-direction: column-reverse; /* Stack on small screens */
+    flex-direction: column-reverse;
   }
 }
 

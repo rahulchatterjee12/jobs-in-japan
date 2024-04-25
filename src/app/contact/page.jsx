@@ -44,19 +44,19 @@ const ContactPage = () => {
           className="h-1/2 lg:h-full lg:w-1/2 m-2 bg-white bg-opacity-30 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 text-gray-600"
           style={{ backdropFilter: "blur(20px)" }}
         >
-          <span>Enter Your Message:</span>
+          <span className="text-white">Enter Your Message:</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border p-1 rounded-t-md border-b-gray-600 outline-none resize-none"
+            className="bg-transparent border-b-2 border p-1 rounded-t-md border-b-white outline-none resize-none"
             name="user_message"
           />
-          <span>Enter Your Email:</span>
+          <span className="text-white">Enter Your Email:</span>
           <input
             name="user_email"
             type="text"
-            className="bg-transparent border-b-2 border rounded-t-md h-10 p-1 border-b-gray-600 outline-none"
+            className="bg-transparent border-b-2 border rounded-t-md h-10 p-1 border-b-white outline-none"
           />
-          <button className="bg-[#5869bc] rounded font-semibold text-gray-50 p-4">
+          <button className="bg-[#5869bc] rounded font-semibold text-white p-4">
             Send
           </button>
         </form>

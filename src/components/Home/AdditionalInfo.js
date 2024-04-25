@@ -2,7 +2,7 @@ import styles from "./AdditionalInfo.module.css";
 
 function AdditionalInfo() {
   return (
-    <section className={styles.additionalInfo}>
+    <section className={`${styles.additionalInfo} text-white`}>
       <h2 className="font-semibold font-serif text-3xl mb-5">
         Additional Information
       </h2>

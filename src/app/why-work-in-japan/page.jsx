@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client";
 import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -48,34 +50,43 @@ const data = [
 
 const page = () => {
   return (
-    <div className="why-work-in-japan pb-10 ">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          Why Work in Japan?
-        </h2>
-        {data.map((item) => (
-          <div
-            className="flex flex-col md:flex-row md:space-x-8 mb-8 items-center bg-white bg-opacity-20 border border-gray-200 p-5 rounded-md"
-            style={{ backdropFilter: "blur(20px)" }}
-            key={item.img}
-          >
-            <div className="w-full md:w-1/2">
-              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-700">{item.description}</p>
+    <motion.div
+      className="h-full pb-4 items-center"
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+    >
+      <div className="pb-10 ">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">
+            Why Work in Japan?
+          </h2>
+          {data.map((item) => (
+            <div
+              className="flex flex-col md:flex-row md:space-x-8 mb-8 items-center bg-white bg-opacity-20 border border-gray-200 p-5 rounded-md"
+              style={{ backdropFilter: "blur(20px)" }}
+              key={item.img}
+            >
+              <div className="w-full md:w-1/2">
+                <h3 className="text-xl text-white font-bold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white">{item.description}</p>
+              </div>
+              <div className="w-full md:w-1/2 flex justify-end items-center">
+                <Image
+                  width={220}
+                  height={220}
+                  className="object-cover rounded-lg"
+                  src={item.img}
+                  alt="Innovation in Japan"
+                />
+              </div>
             </div>
-            <div className="w-full md:w-1/2 flex justify-end items-center">
-              <Image
-                width={220}
-                height={220}
-                className="object-cover rounded-lg"
-                src={item.img}
-                alt="Innovation in Japan"
-              />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
