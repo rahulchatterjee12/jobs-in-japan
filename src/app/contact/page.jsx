@@ -41,7 +41,7 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 m-2 bg-white bg-opacity-30 rounded-xl text-xl flex flex-col gap-8 justify-center p-6 mt-5 md:p-24 text-gray-600"
+          className="h-1/2 lg:h-full lg:w-1/2 m-2 bg-white bg-opacity-30 rounded-xl text-xl flex flex-col gap-8 justify-center p-6 mt-5 md:p-12 text-gray-600"
           style={{ backdropFilter: "blur(20px)" }}
         >
           <span className="text-white">Enter Your Message:</span>

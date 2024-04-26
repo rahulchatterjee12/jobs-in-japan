@@ -56,32 +56,34 @@ const page = () => {
       transition={{ duration: 1 }}
     >
       <div className="mt-4 mx-5">
-        <div className="flex justify-end">
-          <div className="relative flex items-center w-full md:w-1/3 h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
-            <div className="grid place-items-center h-full w-12 text-gray-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+        <div className="w-[80%] mx-auto">
+          <div className="flex justify-end">
+            <div className="relative flex items-center w-full md:w-1/3 h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+              <div className="grid place-items-center h-full w-12 text-gray-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+              <input
+                className="h-full w-full outline-none text-sm text-gray-700"
+                type="text"
+                name="query"
+                placeholder="Search..."
+                value={filters.query}
+                onChange={handleChange}
+              />
             </div>
-            <input
-              className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
-              type="text"
-              name="query"
-              placeholder="Search..."
-              value={filters.query}
-              onChange={handleChange}
-            />
           </div>
         </div>
         <div className="flex flex-col gap-4 mt-5">
@@ -102,13 +104,12 @@ const page = () => {
 
         <div className="flex justify-center mt-5">
           {count > perPage && !loading ? (
-            <Button
-              size="small"
-              variant="outlined"
+            <button
+              className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
               onClick={() => setPerPage((pre) => pre + 10)}
             >
               Load More
-            </Button>
+            </button>
           ) : (
             ""
           )}

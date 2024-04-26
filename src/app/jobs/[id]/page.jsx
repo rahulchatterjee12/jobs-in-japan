@@ -1,5 +1,5 @@
 "use client";
-import { CircularProgress } from "@mui/material";
+import { Backdrop, Box, CircularProgress, Modal } from "@mui/material";
 import axios from "axios";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -8,6 +8,10 @@ import React, { useEffect, useState } from "react";
 const page = () => {
   const id = usePathname();
   const [data, setData] = useState();
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     axios.get(`/api${id}`).then((res) => {
@@ -79,11 +83,46 @@ const page = () => {
               </h3>
             </div>
             <div className="flex justify-center mt-6">
-              <button className="bg-orange-500 text-white px-16 py-2 rounded-3xl">
+              <button
+                onClick={() => setOpen(true)}
+                className="overflow-hidden w-32 p-2 h-12 bg-[#1f2937] text-white border-none rounded-md text-xl font-bold cursor-pointer relative group"
+              >
                 Apply Now
+                <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+                <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+                <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
+                <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 ">
+                  Apply Now
+                </span>
               </button>
             </div>
           </div>
+          <>
+            <Modal open={open} onClose={handleClose}>
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <div className="bg-white p-3">
+                  <label
+                    htmlFor="formFileLg"
+                    className="mb-2 inline-block text-neutral-500 dark:text-neutral-400"
+                  >
+                    Large file input example
+                  </label>
+                  <input
+                    className="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-[0.32rem] text-base font-normal leading-[2.15] text-surface transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:me-3 file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-e file:border-solid file:border-inherit file:bg-transparent file:px-3  file:py-[0.32rem] file:text-surface focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none dark:border-white/70 dark:text-white  file:dark:text-white"
+                    id="formFileLg"
+                    type="file"
+                  />
+                </div>
+              </Box>
+            </Modal>
+          </>
         </div>
       )}
     </>
