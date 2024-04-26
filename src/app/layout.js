@@ -20,8 +20,7 @@ export default function RootLayout({ children }) {
             style={{
               height: "100vh",
               width: "100vw",
-              // backgroundImage: 'url("/images/bg.jpg")',
-              background: "#7898a9",
+              background: "#1f2937",
               backgroundSize: "cover",
               contain: "content",
               backgroundRepeat: "no-repeat",

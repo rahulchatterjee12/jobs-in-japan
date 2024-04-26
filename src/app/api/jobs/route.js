@@ -31,7 +31,6 @@ export async function GET(req, res) {
     const count = await Job.countDocuments({ ...searchQuery });
 
     return NextResponse.json({
-      message: "Post created successfully",
       success: true,
       data: jobs,
       count: count,

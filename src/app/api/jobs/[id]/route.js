@@ -13,7 +13,7 @@ export async function GET(req, res) {
     const job = await Job.findOne({ _id: id });
 
     return NextResponse.json({
-      message: "Post created successfully",
+      message: "Job found",
       success: true,
       data: job,
     });

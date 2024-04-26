@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="bg-white bg-opacity-30 border sticky top-0 z-50"
+      className="bg-blue-400 bg-opacity-30  sticky top-0 z-50"
       style={{ backdropFilter: "blur(20px)" }}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">

@@ -73,7 +73,7 @@ const page = () => {
                 </h3>
                 <p className="text-white">{item.description}</p>
               </div>
-              <div className="w-full md:w-1/2 flex justify-end items-center">
+              <div className="w-full md:w-1/2 flex justify-center mt-2 md:mt-0 md:justify-end items-center">
                 <Image
                   width={220}
                   height={220}

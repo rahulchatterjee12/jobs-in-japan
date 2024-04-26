@@ -18,10 +18,9 @@ const page = () => {
             </h2>
             <div className=" text-xl leading-relaxed">
               JOB HUNT is a company passionate about empowering individuals to
-              find their dream careers in Japan. Founded in [Year] by
-              [Founder(s) Name(s)], we strive to bridge the gap between talented
-              professionals and exciting opportunities in the Japanese job
-              market.
+              find their dream careers in Japan. Founded in 2024 , we strive to
+              bridge the gap between talented professionals and exciting
+              opportunities in the Japanese job market.
               <br />
               We believe in:
               <ul className="list-disc pl-4 mt-4">
