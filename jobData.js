@@ -1,3 +1,5 @@
+import { connect } from "@/db/dbConfig";
+
 export const jobs = [
   {
     title: "Software Engineer",

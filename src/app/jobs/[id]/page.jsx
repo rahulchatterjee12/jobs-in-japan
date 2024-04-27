@@ -1,5 +1,5 @@
 "use client";
-import { Backdrop, Box, Button, CircularProgress, Modal } from "@mui/material";
+import { Box, CircularProgress, Modal } from "@mui/material";
 import axios from "axios";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -10,6 +10,11 @@ const page = () => {
   const [data, setData] = useState();
   const [open, setOpen] = useState(false);
   const [isDone, setIsDone] = useState(false);
+  const [resume, setResume] = useState();
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+
   const handleClose = () => {
     setOpen(false);
     setIsDone(false);
@@ -20,6 +25,19 @@ const page = () => {
       setData(res.data.data);
     });
   }, [id]);
+
+  const handleUpload = async () => {
+    if (resume) {
+      const formData = new FormData();
+      formData.append("file", resume);
+      formData.append("name", name);
+      formData.append("phone", phone);
+      formData.append("email", email);
+
+      const res = await axios.post(`/api${id}/apply`, formData);
+      setIsDone(true);
+    }
+  };
 
   return (
     <>
@@ -109,7 +127,7 @@ const page = () => {
                   transform: "translate(-50%, -50%)",
                 }}
               >
-                <>
+                <div className="w-[100vw] md:w-full mx-auto">
                   {isDone ? (
                     <div className="w-[100px] h-[100px] rounded-md">
                       <Image
@@ -117,45 +135,80 @@ const page = () => {
                         src="/images/verified.gif"
                         className="object-contain rounded-md"
                       />
-                      <h3>Application Complete</h3>
                     </div>
                   ) : (
-                    <div className="bg-white p-3 rounded-md">
+                    <form
+                      onSubmit={(e) => e.preventDefault()}
+                      className="bg-white p-3 rounded-md w-[90vw] mx-auto md:w-full"
+                    >
                       <h2>Upload your resume to apply</h2>
-                      <label
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="file_input"
-                      >
-                        Upload Resume
-                      </label>
-                      <input
-                        className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
-                        id="file_input"
-                        type="file"
-                      />
-                      <p
-                        class="mt-1 text-sm text-gray-500 dark:text-gray-300"
-                        id="file_input_help"
-                      >
-                        PDF (MAX. 2MB).
-                      </p>
-                      <div className="flex w-full justify-center mt-5">
-                        <button
-                          onClick={() => setIsDone(true)}
-                          className="overflow-hidden w-32 p-2 h-12 bg-[#1f2937] text-white border-none rounded-md text-xl font-bold cursor-pointer relative group"
-                        >
-                          Upload
-                          <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-                          <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-                          <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                          <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 ">
+                      <div className="flex flex-col gap-4 mt-2">
+                        <input
+                          className="p-2 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
+                          type="text"
+                          value={name}
+                          placeholder="Name"
+                          onChange={(e) => setName(e.target.value)}
+                          required
+                        />
+
+                        <input
+                          className="p-2  block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
+                          type="email"
+                          value={email}
+                          placeholder="Email"
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                        />
+
+                        <input
+                          className="p-2 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
+                          type="number"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          placeholder="Phone"
+                          required
+                        />
+                        <div>
+                          <label
+                            className="p-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            htmlFor="file_input"
+                          >
+                            Upload Resume
+                          </label>
+                          <input
+                            className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
+                            id="file_input"
+                            type="file"
+                            onChange={(e) => setResume(e.target.files[0])}
+                            required
+                          />
+                          <p
+                            className="mt-1 text-sm text-gray-500 dark:text-gray-300"
+                            id="file_input_help"
+                          >
+                            PDF (MAX. 2MB).
+                          </p>
+                        </div>
+                        <div className="flex w-full justify-center mt-5">
+                          <button
+                            onClick={handleUpload}
+                            type="submit"
+                            className="overflow-hidden w-32 p-2 h-12 bg-[#1f2937] text-white border-none rounded-md text-xl font-bold cursor-pointer relative group"
+                          >
                             Upload
-                          </span>
-                        </button>
+                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
+                            <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 ">
+                              Upload
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </form>
                   )}
-                </>
+                </div>
               </Box>
             </Modal>
           </>
