@@ -27,7 +27,8 @@ const page = () => {
   }, [id]);
 
   const handleUpload = async () => {
-    if (resume) {
+    if (resume && name && phone && email) {
+      setIsDone(true);
       const formData = new FormData();
       formData.append("file", resume);
       formData.append("name", name);
@@ -35,7 +36,6 @@ const page = () => {
       formData.append("email", email);
 
       const res = await axios.post(`/api${id}/apply`, formData);
-      setIsDone(true);
     }
   };
 
