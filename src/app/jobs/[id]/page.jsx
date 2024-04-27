@@ -117,14 +117,16 @@ const page = () => {
                         src="/images/verified.gif"
                         className="object-contain rounded-md"
                       />
+                      <h3>Application Complete</h3>
                     </div>
                   ) : (
                     <div className="bg-white p-3 rounded-md">
+                      <h2>Upload your resume to apply</h2>
                       <label
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         for="file_input"
                       >
-                        Upload file
+                        Upload Resume
                       </label>
                       <input
                         className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 "
