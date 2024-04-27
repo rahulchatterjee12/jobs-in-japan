@@ -2,12 +2,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { Button, CircularProgress, TextField } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import JobCard from "@/components/common/JobCard";
 
 const page = () => {
-  const [jobs, setJobs] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [jobs, setJobs] = useState();
   const [filters, setFilters] = useState({
     query: "",
   });
@@ -24,19 +23,15 @@ const page = () => {
   }, [filters]);
 
   const fetchJobs = () => {
-    setLoading(true);
     try {
       axios
         .get(`/api/jobs?page=${page}&limit=${perPage}&q=${filters.query}`)
         .then((res) => {
           setJobs(res.data.data);
           setCount(res.data.count);
-          setLoading(false);
         });
     } catch (err) {
       console.error("Error fetching jobs:", err);
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -87,14 +82,15 @@ const page = () => {
           </div>
         </div>
         <div className="flex flex-col gap-4 mt-5">
-          {jobs.map((job) => (
-            <div key={job._id}>
-              <JobCard job={job} />
-            </div>
-          ))}
+          {jobs &&
+            jobs.map((job) => (
+              <div key={job._id}>
+                <JobCard job={job} />
+              </div>
+            ))}
         </div>
 
-        {loading ? (
+        {!jobs ? (
           <div className="w-[100%] flex justify-center mt-4">
             <CircularProgress />
           </div>
@@ -103,7 +99,7 @@ const page = () => {
         )}
 
         <div className="flex justify-center mt-5">
-          {count > perPage && !loading ? (
+          {count > perPage ? (
             <button
               className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
               onClick={() => setPerPage((pre) => pre + 10)}
